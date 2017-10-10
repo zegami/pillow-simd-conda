@@ -1,4 +1,4 @@
-{% set version = "3.4" %}
+{% set version = "4.3.0" %}
 
 package:
   name: pillow-simd
@@ -20,12 +20,14 @@ requirements:
     - jpeg 9*
     - freetype 2.6.*
     - tk 8.5.*
+    - olefile 0.44
   run:
     - python
     - jpeg 9*
     - zlib 1.2.*
     - freetype 2.6.*
     - libtiff 4.0.*
+    - olefile 0.44
 
 test:
   imports:

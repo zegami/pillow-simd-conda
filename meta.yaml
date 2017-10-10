@@ -5,10 +5,10 @@
 
 package:
     name: pillow-simd
-    version: '3.4'
+    version: '4.3.0'
 source:
-    url: https://github.com/uploadcare/pillow-simd/archive/v3.4.1.post2.tar.gz
-    fn: v3.4.1.post2.tar.gz
+    url: https://github.com/uploadcare/pillow-simd/archive/4.3.0.tar.gz
+    fn: 4.3.0.tar.gz
 build:
     number: '0'
 requirements:
@@ -20,12 +20,14 @@ requirements:
         - jpeg 9*
         - freetype 2.6.*
         - tk 8.5.*
+        - olefile 0.44
     run:
         - python
         - jpeg 9*
         - zlib 1.2.*
         - freetype 2.6.*
         - libtiff 4.0.*
+        - olefile 0.44
 test:
     imports:
         - PIL
