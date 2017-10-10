@@ -1,0 +1,43 @@
+{% set version = "3.4" %}
+
+package:
+  name: pillow-simd
+  version: {{ version }}
+
+source:
+ git_url: https://github.com/uploadcare/pillow-simd.git
+ 
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - zlib 1.2.*
+    - libtiff 4.0.*
+    - jpeg 9*
+    - freetype 2.6.*
+    - tk 8.5.*
+  run:
+    - python
+    - jpeg 9*
+    - zlib 1.2.*
+    - freetype 2.6.*
+    - libtiff 4.0.*
+
+test:
+  imports:
+    - PIL
+    - PIL.Image
+  #commands:
+    #- conda inspect linkages -p $PREFIX pillow  # [not win]
+    #- conda inspect objects -p $PREFIX pillow  # [osx]
+
+about:
+  home: https://github.com/uploadcare/pillow-simd/
+  license: Standard PIL license
+  summary: 'Pillow is the friendly PIL fork by Alex Clark and Contributors.'
+
+
